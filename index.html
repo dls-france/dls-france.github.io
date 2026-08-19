@@ -4,125 +4,311 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>DLS — Droit, Liberté, Solidarité</title>
+  <title>DLS — Droit, Liberté, Solidarité | France</title>
 
-  <meta name="description" content="DLS — Droit, Liberté, Solidarité. Association française engagée pour la défense des droits humains, des libertés fondamentales, la solidarité et l'aide humanitaire.">
-
-  <meta name="keywords" content="DLS, Droit Liberté Solidarité, association France, droits humains, libertés, solidarité, aide humanitaire">
+  <meta name="description" content="DLS — Droit, Liberté, Solidarité est une association française engagée dans la défense des droits humains, des libertés fondamentales, la solidarité et l'action humanitaire.">
 
   <meta name="robots" content="index, follow">
+  <meta name="author" content="DLS — Droit, Liberté, Solidarité">
+
+  <meta property="og:title" content="DLS — Droit, Liberté, Solidarité">
+  <meta property="og:description" content="Défendre les droits humains, protéger les libertés fondamentales et agir par la solidarité.">
+  <meta property="og:type" content="website">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "NGO",
+    "name": "DLS — Droit, Liberté, Solidarité",
+    "alternateName": "DLS",
+    "areaServed": "France",
+    "description": "Association française engagée dans la défense des droits humains, des libertés fondamentales, la solidarité et l'action humanitaire."
+  }
+  </script>
 
   <style>
+    :root {
+      --navy: #0b1f33;
+      --blue: #145da0;
+      --blue-light: #1f75bd;
+      --white: #ffffff;
+      --soft: #f4f7fa;
+      --text: #243447;
+      --muted: #5e6d7c;
+      --border: #dce5ed;
+    }
+
     * {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
     }
 
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       font-family: Arial, Helvetica, sans-serif;
-      color: #1f2937;
-      line-height: 1.6;
-      background: #ffffff;
+      background: var(--white);
+      color: var(--text);
+      line-height: 1.65;
     }
 
     header {
-      background: #102a43;
-      color: white;
-      padding: 18px 8%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(11, 31, 51, 0.97);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
     }
 
-    .logo {
-      font-size: 28px;
-      font-weight: bold;
+    .navbar {
+      max-width: 1200px;
+      margin: auto;
+      min-height: 82px;
+      padding: 0 28px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      color: white;
+      text-decoration: none;
+    }
+
+    .brand-mark {
+      width: 52px;
+      height: 52px;
+      border: 2px solid white;
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 20px;
+      letter-spacing: 1px;
+      background: linear-gradient(135deg, var(--blue-light), var(--navy));
+      box-shadow: 0 6px 18px rgba(0,0,0,0.18);
+    }
+
+    .brand-text strong {
+      display: block;
+      font-size: 18px;
+      letter-spacing: 0.3px;
+    }
+
+    .brand-text span {
+      display: block;
+      font-size: 12px;
+      color: #c8d7e5;
+      margin-top: 1px;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 24px;
     }
 
     nav a {
-      color: white;
+      color: #eef5fb;
       text-decoration: none;
-      margin-left: 20px;
-      font-size: 15px;
+      font-size: 14px;
+      font-weight: 600;
+      transition: 0.2s;
+    }
+
+    nav a:hover {
+      color: #8cc8f2;
     }
 
     .hero {
-      background: linear-gradient(135deg, #102a43, #1f5f8b);
-      color: white;
-      min-height: 480px;
+      min-height: 610px;
       display: flex;
       align-items: center;
-      padding: 60px 8%;
+      background:
+        radial-gradient(circle at 80% 20%, rgba(42,137,199,0.35), transparent 32%),
+        linear-gradient(135deg, #07192a 0%, #0d3659 55%, #1669a8 100%);
+      color: white;
     }
 
-    .hero-content {
-      max-width: 850px;
+    .hero-inner {
+      width: 100%;
+      max-width: 1200px;
+      margin: auto;
+      padding: 90px 28px;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      border: 1px solid rgba(255,255,255,0.35);
+      border-radius: 999px;
+      padding: 8px 15px;
+      font-size: 13px;
+      letter-spacing: 0.5px;
+      margin-bottom: 24px;
+      background: rgba(255,255,255,0.07);
     }
 
     .hero h1 {
-      font-size: 52px;
-      margin-bottom: 15px;
+      font-size: clamp(52px, 8vw, 92px);
+      line-height: 0.95;
+      margin-bottom: 18px;
+      letter-spacing: -2px;
     }
 
     .hero h2 {
-      font-size: 27px;
-      font-weight: normal;
-      margin-bottom: 25px;
+      max-width: 800px;
+      font-size: clamp(25px, 4vw, 40px);
+      font-weight: 500;
+      margin-bottom: 28px;
+      color: #dcecf7;
     }
 
     .hero p {
+      max-width: 760px;
       font-size: 19px;
-      max-width: 750px;
+      color: #edf5fb;
+      margin-bottom: 36px;
+    }
+
+    .hero-button {
+      display: inline-block;
+      background: white;
+      color: var(--navy);
+      padding: 14px 22px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 700;
     }
 
     section {
-      padding: 70px 8%;
+      padding: 88px 28px;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .section-label {
+      color: var(--blue);
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      font-weight: 800;
+      margin-bottom: 10px;
     }
 
     section h2 {
-      font-size: 34px;
-      color: #102a43;
-      margin-bottom: 25px;
+      font-size: clamp(32px, 4vw, 46px);
+      line-height: 1.15;
+      color: var(--navy);
+      margin-bottom: 24px;
     }
 
-    .intro {
-      max-width: 900px;
-      font-size: 18px;
+    .lead {
+      max-width: 850px;
+      font-size: 19px;
+      color: var(--muted);
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .about-box {
+      background: var(--soft);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 34px;
+    }
+
+    .about-box strong {
+      color: var(--navy);
+      display: block;
+      font-size: 21px;
+      margin-bottom: 12px;
     }
 
     .missions {
-      background: #f3f6f9;
+      background: var(--soft);
     }
 
     .cards {
+      margin-top: 44px;
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      grid-template-columns: repeat(3, 1fr);
       gap: 22px;
-      margin-top: 35px;
     }
 
     .card {
       background: white;
-      padding: 28px;
-      border-radius: 8px;
-      box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 30px;
+      min-height: 230px;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 30px rgba(11,31,51,0.09);
+    }
+
+    .number {
+      color: var(--blue-light);
+      font-weight: 800;
+      font-size: 13px;
+      margin-bottom: 20px;
     }
 
     .card h3 {
-      color: #1f5f8b;
-      margin-bottom: 12px;
+      color: var(--navy);
       font-size: 21px;
+      margin-bottom: 12px;
     }
 
-    .values {
-      max-width: 950px;
+    .card p {
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    .values-grid {
+      margin-top: 40px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .value {
+      border-left: 4px solid var(--blue);
+      padding: 12px 0 12px 20px;
+    }
+
+    .value strong {
+      display: block;
+      color: var(--navy);
       font-size: 18px;
+      margin-bottom: 5px;
+    }
+
+    .value span {
+      color: var(--muted);
+      font-size: 14px;
     }
 
     .contact {
-      background: #102a43;
+      background: var(--navy);
       color: white;
     }
 
@@ -130,33 +316,54 @@
       color: white;
     }
 
-    footer {
-      text-align: center;
-      background: #081b2a;
-      color: #dbe5ec;
-      padding: 25px 10px;
-      font-size: 14px;
+    .contact .section-label {
+      color: #7fc3ef;
     }
 
-    @media (max-width: 700px) {
-      header {
-        display: block;
-      }
+    .contact p {
+      max-width: 700px;
+      color: #d3e1ec;
+      font-size: 17px;
+    }
 
+    .contact-card {
+      margin-top: 35px;
+      padding: 26px;
+      max-width: 650px;
+      border: 1px solid rgba(255,255,255,0.18);
+      border-radius: 14px;
+      background: rgba(255,255,255,0.05);
+    }
+
+    footer {
+      background: #06121e;
+      color: #aebfcd;
+      padding: 28px;
+      text-align: center;
+      font-size: 13px;
+    }
+
+    @media (max-width: 900px) {
       nav {
-        margin-top: 12px;
+        display: none;
       }
 
-      nav a {
-        margin: 0 15px 0 0;
+      .about-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
       }
 
-      .hero h1 {
-        font-size: 39px;
+      .cards,
+      .values-grid {
+        grid-template-columns: 1fr;
       }
 
-      .hero h2 {
-        font-size: 23px;
+      .hero {
+        min-height: 560px;
+      }
+
+      .brand-text span {
+        display: none;
       }
     }
   </style>
@@ -165,136 +372,91 @@
 <body>
 
 <header>
-  <div class="logo">DLS</div>
+  <div class="navbar">
+    <a class="brand" href="#accueil">
+      <div class="brand-mark">DLS</div>
+      <div class="brand-text">
+        <strong>Droit, Liberté, Solidarité</strong>
+        <span>Association française</span>
+      </div>
+    </a>
 
-  <nav>
-    <a href="#association">L'association</a>
-    <a href="#missions">Nos missions</a>
-    <a href="#valeurs">Nos valeurs</a>
-    <a href="#contact">Contact</a>
-  </nav>
+    <nav>
+      <a href="#association">L'association</a>
+      <a href="#missions">Nos missions</a>
+      <a href="#valeurs">Nos valeurs</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
 </header>
 
-<section class="hero">
-  <div class="hero-content">
-    <h1>DLS</h1>
-    <h2>Droit, Liberté, Solidarité</h2>
+<main>
 
-    <p>
-      Défendre les droits humains, protéger les libertés fondamentales
-      et agir concrètement en faveur de celles et ceux qui ont besoin
-      de soutien et de solidarité.
-    </p>
-  </div>
-</section>
+  <section class="hero" id="accueil">
+    <div class="hero-inner">
+      <div class="eyebrow">Droit • Liberté • Solidarité</div>
 
-<section id="association">
-  <h2>Notre association</h2>
+      <h1>DLS</h1>
 
-  <div class="intro">
-    <p>
-      DLS — Droit, Liberté, Solidarité est une association française
-      indépendante engagée dans la défense des droits humains,
-      des libertés fondamentales et de la dignité humaine.
-    </p>
+      <h2>Défendre la dignité humaine. Protéger les libertés. Agir par la solidarité.</h2>
 
-    <br>
-
-    <p>
-      L'association agit également dans le domaine de la solidarité,
-      de l'aide humanitaire, de l'information et de la sensibilisation
-      du public aux atteintes aux droits et libertés.
-    </p>
-  </div>
-</section>
-
-<section class="missions" id="missions">
-  <h2>Nos missions</h2>
-
-  <div class="cards">
-
-    <div class="card">
-      <h3>Droits humains</h3>
       <p>
-        Défendre les droits fondamentaux et soutenir les personnes
-        confrontées à des violations de leurs droits.
+        DLS est une association française indépendante engagée dans la défense
+        des droits humains, des libertés fondamentales et dans le soutien
+        aux personnes confrontées à des situations de vulnérabilité.
       </p>
-    </div>
 
-    <div class="card">
-      <h3>Libertés fondamentales</h3>
-      <p>
-        Promouvoir la liberté, la dignité humaine et les principes
-        démocratiques.
+      <a class="hero-button" href="#association">Découvrir DLS</a>
+    </div>
+  </section>
+
+  <section id="association">
+    <div class="container about-grid">
+
+      <div>
+        <div class="section-label">Qui sommes-nous ?</div>
+
+        <h2>Droit, Liberté, Solidarité</h2>
+
+        <p class="lead">
+          DLS agit pour promouvoir le respect de la dignité humaine,
+          défendre les droits fondamentaux et développer des actions
+          concrètes de solidarité.
+        </p>
+
+        <p class="lead" style="margin-top:20px;">
+          L'association souhaite également contribuer à l'information
+          du public, au dialogue citoyen et à la sensibilisation aux
+          situations dans lesquelles les droits et libertés sont menacés.
+        </p>
+      </div>
+
+      <div class="about-box">
+        <strong>Une action indépendante</strong>
+        <p>
+          DLS inscrit son action dans le respect des principes démocratiques,
+          de l'État de droit, des libertés fondamentales et de la dignité
+          de chaque personne.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="missions" id="missions">
+    <div class="container">
+
+      <div class="section-label">Notre action</div>
+      <h2>Nos missions</h2>
+
+      <p class="lead">
+        DLS développe ses actions autour de plusieurs domaines complémentaires.
       </p>
-    </div>
 
-    <div class="card">
-      <h3>Solidarité</h3>
-      <p>
-        Apporter un soutien aux personnes vulnérables, réfugiées,
-        déplacées ou en situation de difficulté.
-      </p>
-    </div>
+      <div class="cards">
 
-    <div class="card">
-      <h3>Aide humanitaire</h3>
-      <p>
-        Développer et soutenir des actions humanitaires répondant
-        aux besoins concrets des populations.
-      </p>
-    </div>
-
-    <div class="card">
-      <h3>Information</h3>
-      <p>
-        Informer et sensibiliser le public sur les droits humains,
-        les libertés et les situations nécessitant une mobilisation.
-      </p>
-    </div>
-
-    <div class="card">
-      <h3>Action civique</h3>
-      <p>
-        Encourager le dialogue, la participation citoyenne et les
-        initiatives conformes aux valeurs démocratiques.
-      </p>
-    </div>
-
-  </div>
-</section>
-
-<section id="valeurs">
-  <h2>Nos valeurs</h2>
-
-  <div class="values">
-    <p>
-      DLS fonde son action sur la dignité humaine, la liberté,
-      la solidarité, la justice, la responsabilité et le respect
-      des principes démocratiques.
-    </p>
-  </div>
-</section>
-
-<section class="contact" id="contact">
-  <h2>Contact</h2>
-
-  <p>
-    DLS — Droit, Liberté, Solidarité
-  </p>
-
-  <p>
-    France
-  </p>
-
-  <p style="margin-top:15px;">
-    Les coordonnées officielles de l'association seront publiées prochainement.
-  </p>
-</section>
-
-<footer>
-  ©️ 2026 DLS — Droit, Liberté, Solidarité. Tous droits réservés.
-</footer>
-
-</body>
-</html>
+        <article class="card">
+          <div class="number">01</div>
+          <h3>Droits humains</h3>
+          <p>
+            Déf
